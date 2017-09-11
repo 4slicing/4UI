@@ -1,0 +1,67 @@
+// Button
+=decoration($value)
+  @if $value == none
+    &:hover, &:focus, &:active
+      text-decoration: none
+      outline: none
+
+=button($mod)
+  -webkit-appereance: none
+  border: 0
+  min-width: convertRem(120)
+  cursor: pointer
+  border-radius: $border-radius
+  @extend .fs-inline, .fs-str-16, .fs-tac
+  +transition(all .3s)
+  @if $mod == primary
+    @extend .ptb10, .plr15, .fs-bg-primary, .fs-white
+    &:hover, &:focus
+      +decoration(none)
+      @extend .fs-bg-primary-hover, .fs-white
+  @else if $mod == secondary
+    @extend .ptb10, .plr15, .fs-bg-secondary, .fs-white
+    &:hover, &:focus
+      +decoration(none)
+      @extend .fs-bg-secondary-hover, .fs-white
+  @else if $mod == transparent
+    @extend .ptb10, .plr15, .fs-bg-transparent, .fs-reg
+    &:hover, &:focus
+      text-decoration: underline
+
+button
+  -webkit-appereance: none
+
+.fs
+  &-btn
+    +button(primary)
+    &--primary
+      +button(primary)
+    &--secondary
+      +button(secondary)
+    &--transparent
+      +button(transparent)
+    &--inline
+      &.fs-tar
+        &>[class*='fs-btn-']
+          @extend .ml10
+      &.fs-tal
+        &>[class*='fs-btn-']
+          @extend .mr10
+      &.fs-tac
+        &>[class*='fs-btn-']
+          @extend .mlr5
+  &-auto
+    min-width: 0
+
+  &-fluid
+    width: 100%
+    @extend .fs-block
+
+  &-small
+    min-width: 0
+    padding: convertRem(5) convertRem(15)
+    font-size: convertRem(14)
+    line-height: normal
+
+  &-spaced-0
+    padding: 0

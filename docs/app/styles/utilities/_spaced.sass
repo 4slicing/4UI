@@ -1,0 +1,37 @@
+// Padding & Margin
+=paddingMargin($prefix:'')
+  @for $i from 1 through length($spaced)
+    .#{$prefix}p#{nth($spaced, $i)}
+      padding: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}ptb#{nth($spaced, $i)}
+      padding-top: convertRem(#{nth($spaced, $i)})
+      padding-bottom: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}pt#{nth($spaced, $i)}
+      padding-top: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}pb#{nth($spaced, $i)}
+      padding-bottom: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}plr#{nth($spaced, $i)}
+      padding-left: convertRem(#{nth($spaced, $i)})
+      padding-right: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}pl#{nth($spaced, $i)}
+      padding-left: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}pr#{nth($spaced, $i)}
+      padding-right: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}mtb#{nth($spaced, $i)}
+      margin-top: convertRem(#{nth($spaced, $i)})
+      margin-bottom: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}mlr#{nth($spaced, $i)}
+      margin-left: convertRem(#{nth($spaced, $i)})
+      margin-right: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}m#{nth($spaced, $i)}
+      margin: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}mt#{nth($spaced, $i)}
+      margin-top: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}mb#{nth($spaced, $i)}
+      margin-bottom: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}ml#{nth($spaced, $i)}
+      margin-left: convertRem(#{nth($spaced, $i)})
+    .#{$prefix}mr#{nth($spaced, $i)}
+      margin-right: convertRem(#{nth($spaced, $i)})
+
++paddingMargin()

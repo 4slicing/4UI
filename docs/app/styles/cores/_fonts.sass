@@ -1,0 +1,14 @@
+// Font family
+/* Font Faces Base */
+@for $i from 1 through length($font-type)
+  $src: #{"../fonts/roboto/roboto-"}#{nth($font-type, $i)}
+  @font-face
+    font-family : $font-family
+    src         : local($font-family)
+    src         : url('#{$src}.ttf')
+    src         : url('#{$src}.ttf') format('truetype'), url('#{$src}.woff') format('woff'), url('#{$src}.woff2') format('woff2'),  url('#{$src}.svg#svgFontName') format('svg') format('truetype'), url('#{$src}.svg#svgFontName') format('svg')
+    font-style  : normal
+    font-weight : nth($font-weight, $i)
+
+.fs-roboto
+  font-family: $font-family

@@ -1,0 +1,83 @@
+// Utilities
+.fs
+  &-left
+    float: left
+  &-right
+    float: right
+  &-block
+    display: block !important
+    &-lg
+      +min-query-media(lg)
+        display: none !important
+      +max-query-media(lg)
+        display: block !important
+    &-md
+      +min-query-media(md)
+        display: none !important
+      +max-query-media(md)
+        display: block !important
+    &-sm
+      +min-query-media(sm)
+        display: none !important
+      +max-query-media(sm)
+        display: block !important
+    &-xs
+      +min-query-media(xs)
+        display: none !important
+      +max-query-media(xs)
+        display: block !important
+  &-hide
+    display: none !important
+    &-lg
+      +min-query-media(lg)
+        display: block !important
+      +max-query-media(lg)
+        display: none !important
+    &-md
+      +min-query-media(md)
+        display: block !important
+      +max-query-media(md)
+        display: none !important
+    &-sm
+      +min-query-media(sm)
+        display: block !important
+      +max-query-media(sm)
+        display: none !important
+    &-xs
+      +min-query-media(xs)
+        display: block !important
+      +max-query-media(xs)
+        display: none !important
+  &-fullpage
+    height: 100vh
+  &-table
+    display: table
+    width: 100%
+  &-table-cell
+    display: table-cell
+  &-inline
+    display: inline-block
+  &-no-border
+    border: 0
+
+// Color & Background
+=color($prefix:'fs-')
+  @for $i from 1 through length($color-name)
+    .#{$prefix}#{nth($color-name, $i)}
+      color: #{nth($color-list, $i)}
+    .#{$prefix}bg-#{nth($color-name, $i)}
+      background-color: #{nth($color-list, $i)}
++color()
+
+// Text Align
+=align($prefix:'fs-')
+  @for $i from 1 through length($name)
+    .#{$prefix}ta#{nth($name, $i)}
+      text-align: #{nth($align, $i)}
+    .#{$prefix}ta#{nth($name, $i)}-xs
+      +query-media(xs)
+        text-align: #{nth($align, $i)}
+  @for $i from 1 through length($vname)
+    .#{$prefix}ta#{nth($vname, $i)}
+      vertical-align: #{nth($valign, $i)}
++align()

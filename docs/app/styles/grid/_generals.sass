@@ -1,0 +1,115 @@
+.clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.fs
+  &-container
+    max-width: convertRem($width-container)
+    margin: 0 auto
+    @extend .plr15
+    &-fluid
+      @extend .plr15
+      max-width: 100%
+
+  &-row
+    margin-left: convertRem(-15)
+    margin-right: convertRem(-15)
+    @extend .clearfix
+    &>[class*='col-']
+      @extend .plr15, .fs-left
+      min-height: 1px
+    &-no-gutter
+      margin-left: convertRem(0)
+      margin-right: convertRem(0)
+      @extend .clearfix
+      &>[class*='col-']
+        padding-left: convertRem(0)
+        padding-right: convertRem(0)
+
+  &-flex
+    justify-content: left
+    display: flex
+    flex-wrap: wrap
+    margin-left: convertRem(-15)
+    margin-right: convertRem(-15)
+    // +max-query-media(xs)
+    //   display: block
+    &>[class*='fs-flex-']
+      @extend .plr15
+    &-center
+      @extend .fs-flex
+      justify-content: center
+    &-mid
+      @extend .fs-flex
+      align-items: center
+      +max-query-media(xs)
+        display: flex
+    &-no-gutter
+      margin-left: convertRem(0)
+      margin-right: convertRem(0)
+      @extend .clearfix
+      &>[class*='fs-flex-']
+        padding-left: convertRem(0)
+        padding-right: convertRem(0)
+    &-col-auto
+      display: block
+      flex-basis: 0
+      flex-grow: 1
+      flex-shrink: 1
+      align-items: stretch
+    &.column
+      display: -ms-flexbox
+      -ms-flex-direction: column
+      -ms-flex-wrap: wrap
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 500px
+      +max-query-media(xs)
+        display: block
+        height: auto
+
+// offset position
+=build-grid-offset($prefix:'fs-')
+  @for $i from 1 through length($grid-value)
+    .#{$prefix}offset-#{nth($grid-value, $i)}-lg
+      +min-query-media(lg)
+        margin-left: calc(100% * #{nth($grid-value, $i)}/12)
+      +max-query-media(lg)
+        margin-left: 0
+    .#{$prefix}offset-#{nth($grid-value, $i)}-md
+      +min-query-media(md)
+        margin-left: calc(100% * #{nth($grid-value, $i)}/12)
+      +max-query-media(md)
+        margin-left: 0
+    .#{$prefix}offset-#{nth($grid-value, $i)}-sm
+      +min-query-media(sm)
+        margin-left: calc(100% * #{nth($grid-value, $i)}/12)
+      +max-query-media(sm)
+        margin-left: 0
+
++build-grid-offset()
+
+// column
+=column($value, $gap)
+  -moz-column-count: $value
+  -webkit-column-count: $value
+  column-count: $value
+  -webkit-column-gap: $gap
+  -moz-column-gap: $gap
+  column-gap: $gap
+
+=build-column($prefix:'fs-')
+  @for $i from 1 through length($grid-value)
+    .#{$prefix}columns-#{nth($grid-value, $i)}
+      +column(#{nth($grid-value, $i)}, convertRem(30))
+      +max-query-media(xs)
+        +column(1, 0)
+      .fs-column
+        display: inline-block
+        width: 100%
+        @extend .mb30
+
++build-column()

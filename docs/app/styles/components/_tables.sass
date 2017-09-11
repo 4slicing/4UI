@@ -1,0 +1,39 @@
+// Tables
+.fs
+  &-table
+    @extend .fs-reg-16
+    thead, tbody
+      tr
+        th
+          @extend .fs-smb
+          border-bottom: 2px solid $border
+        th, td
+          @extend .p10, .fs-tal
+          border-top: 1px solid $border
+          &:first-child
+            padding-left: 0
+          &:last-child
+            padding-right: 0
+        &:first-child
+          th
+            border-top: 0
+    &.bordered
+      border: 1px solid $border
+      thead, tbody
+        tr
+          th, td
+            border: 1px solid $border
+            &:first-child
+              padding-left: convertRem(10)
+            &:last-child
+              padding-right: convertRem(10)
+    &.stripped
+      thead, tbody
+        tr
+          th, td
+            &:first-child
+              padding-left: convertRem(10)
+            &:last-child
+              padding-right: convertRem(10)
+          &:not(.is-selected):nth-child(even)
+            background-color: $stripped-table

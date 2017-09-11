@@ -1,0 +1,85 @@
+// Convert rem
+@function convertRem($size)
+  $remSize: 1/$base-value*$size
+  @return #{$remSize}rem
+
+@function convertRemLineHeight($size)
+  $remSize: 0.8+1/$base-value*$size
+  @return #{$remSize}rem
+
+@function convertRemFontMobile($size)
+  $remSize: 1/$base-value*$size - 1
+  @return #{$remSize}rem
+
+// Convert grid
+@function convertGrid($size)
+  $gridSize: 100%*$size/12
+  @return #{$gridSize}
+
+// Animation
+// Transition
+=transition($x)
+  transition: $x
+  -webkit-transition: $x
+  -moz-transition: $x
+
+// Transform
+=transform($x)
+  transform: $x
+  -webkit-transform: $x
+  -moz-transform: $x
+
+// Media Query
+=query-media($media)
+  @if $media == xs
+    @media screen and (min-width: 0) and (max-width: $xs)
+      @content
+  @else if $media == sm
+    @media screen and (min-width: $xs) and (max-width: $sm)
+      @content
+  @else if $media == md
+    @media screen and (min-width: $sm) and (max-width: $md)
+      @content
+  @else if $media == lg
+    @media screen and (min-width: $md) and (max-width: $lg)
+      @content
+
+=min-query-media($media)
+  @if $media == xl
+    @media screen and (min-width: $xl)
+      @content
+  @else if $media == lg
+    @media screen and (min-width: $lg)
+      @content
+  @else if $media == md
+    @media screen and (min-width: $md)
+      @content
+  @else if $media == sm
+    @media screen and (min-width: $sm)
+      @content
+  @else if $media == xs
+    @media screen and (min-width: $xs)
+      @content
+  @else if $media == xxs
+    @media screen and (min-width: $xxs)
+      @content
+
+=max-query-media($media)
+  @if $media == xl
+    @media screen and (max-width: $xl)
+      @content
+  @else if $media == lg
+    @media screen and (max-width: $lg)
+      @content
+  @else if $media == md
+    @media screen and (max-width: $md)
+      @content
+  @else if $media == sm
+    @media screen and (max-width: $sm)
+      @content
+  @else if $media == xs
+    @media screen and (max-width: $xs)
+      @content
+  @else if $media == xxs
+    @media screen and (max-width: $xxs)
+      @content
