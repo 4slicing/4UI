@@ -1,0 +1,20 @@
+// Images
+img
+  @extend .fs-inline, .fs-tam
+  &.fs
+    &-fluid
+      max-width: 100%
+      width: auto
+      height: auto
+
+// Image size & type
+=image($prefix:'fs-')
+  @for $i from 1 through length($img-type)
+    .#{$prefix}figure--#{nth($img-type, $i)}
+      display: inline-block
+      width: convertRem(#{nth($img-size, $i)})
+      height: convertRem(#{nth($img-size, $i)})
+      &.circle
+        border-radius: 50%
+        overflow: hidden
++image()

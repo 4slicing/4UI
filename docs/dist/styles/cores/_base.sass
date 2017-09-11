@@ -1,0 +1,89 @@
+// Basic
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+html, body
+  font-family: $font-family, sans-serif
+  @extend .fs-reg-16
+  color: $black
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  overflow-x: hidden
+
+// Hyperlink Default
+a
+  color: $black
+  text-decoration: none
+  outline: none
+  +transition(all .4s)
+  &:hover, &:focus, &:active
+    text-decoration: none
+    color: $secondary
+    outline: none
+
+// Elem inline
+span
+  display: inline-block
+  vertical-align: middle
+
+// Header Tags Default
+h1, h2, h3, h4, h5, h6
+  margin: 0 0 20px
+
+h1
+  @extend .fs-reg-32
+
+h2
+  @extend .fs-reg-24
+
+h3
+  @extend .fs-reg-18
+
+h4
+  @extend .fs-reg-16
+
+h5
+  @extend .fs-reg-14
+
+h6
+  @extend .fs-reg-12
+
+strong, b
+  @extend .fs-str
+
+// Paragraph
+p
+  margin-bottom: convertRem(20)
+
+// HR
+hr
+  border: 0
+  border-top: 1px solid $border
+
+// Unordered List
+ul, ol
+  padding-left: 30px
+  &.none
+    list-style: none
+    padding: 0
+    margin: 0
+
+// Tables
+table
+  border-spacing: 0
+  border-collapse: collapse
+
+// Code
+code
+  font-family: Consolas, monospace, serif
+  @extend .fs-reg-14, .fs-inline
+  color: red
+  padding-left: convertRem(4)
+  padding-right: convertRem(4)
+  background-color: #f3f3f3
+  border-radius: $border-radius
+  border: 1px solid $border

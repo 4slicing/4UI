@@ -1,0 +1,765 @@
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+  	<meta name="author" content="4slicing.com &copy; 2017">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4UI CSS - Created by 4 Slicing</title>
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+
+    <header class="fs-header-sticky fs-bg-primary">
+      <div class="fs-container-fluid ptb10">
+        <div class="fs-flex">
+          <div class="fs-flex-6-xs">
+            <h1 class="fs-str-21 mb0 fs-white">4UI CSS</h1>
+          </div>
+          <div class="fs-flex-6-xs fs-tar">
+            <div class="fs-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="fs-nav--inline">
+              <span>
+                <a class="fs-white" href="get-started.html">Get started</a>
+              </span>
+              <span>
+                <a class="fs-white" href="documentation.html">Documentation</a>
+              </span>
+              <span>
+                <a class="fs-white" href="example.html">Examples</a>
+              </span>
+              <span>
+                <a href="#" class="fs-btn--secondary fs-small">Donate</a>
+              </span>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="fs-container-fluid">
+      <div class="fs-flex">
+        <div class="fs-flex-col fs-flex-2-sm fs-hide-sm pt60 mr30" style="border-right: 1px solid #ddd">
+          <nav class="ptb20 pr20 fs-reg-14">
+            <h5 class="fs-upper mb10">
+              <a href="#get-started" class="fs-primary">Getting started</a>
+            </h5>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Cores</h5>
+            <ul class="none">
+              <li><a href="#options" class="fs-block">Options</a></li>
+              <li><a href="#media-query" class="fs-block">Media Query</a></li>
+              <li><a href="#mixin" class="fs-block">Mixins</a></li>
+              <li><a href="#color" class="fs-block">Color</a></li>
+            </ul>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Content</h5>
+            <ul class="none">
+              <li><a href="#heading" class="fs-block">Heading</a></li>
+              <li><a href="#typography" class="fs-block">Typhography</a></li>
+              <li><a href="#paragraph" class="fs-block">Paragraph</a></li>
+              <li><a href="#list" class="fs-block">List</a></li>
+              <li><a href="#images" class="fs-block">Images</a></li>
+              <li><a href="#figures" class="fs-block">Figures</a></li>
+            </ul>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Layouts</h5>
+            <ul class="none">
+              <li><a href="#grid" class="fs-block">Grid</a></li>
+              <li><a href="#column" class="fs-block">Column</a></li>
+            </ul>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Elements</h5>
+            <ul class="none">
+              <li><a href="#buttons" class="fs-block">Button</a></li>
+              <li><a href="#tables" class="fs-block">Table</a></li>
+              <li><a href="#forms" class="fs-block">Form</a></li>
+              <li><a href="#blockquote" class="fs-block">Blockquote</a></li>
+              <li><a href="#label" class="fs-block">Label</a></li>
+            </ul>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Components</h5>
+            <ul class="none">
+              <li><a href="#cores" class="fs-block">Alert</a></li>
+              <li><a href="#cores" class="fs-block">Breadcrumb</a></li>
+              <li><a href="#cores" class="fs-block">Pagination</a></li>
+            </ul>
+            <h5 class="fs-upper mb10 mt10 fs-primary">Utilities</h5>
+            <ul class="none">
+              <li><a href="#cores" class="fs-block">Margin & padding</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="fs-flex-col fs-flex-9-sm">
+          <div class="pt80">
+            <div id="get-started" class="mb60">
+              <h2 class="fs-reg-32">Introduction</h2>
+              <p>4UI CSS framework make you easier to create styling guide for your app.</p>
+              <div class="mb20">
+                <span>
+                  <a href="#" class="fs-btn--primary mr20">Download</a>
+                </span>
+                <span>
+                  <span class="mr20">or</span><code class="fs-inline fs-bg-black fs-white no-border">$ npm install 4ui-css</code>
+                </span>
+              </div>
+            </div>
+            <div id="cores" class="mb60">
+              <h2 class="fs-reg-32">Cores</h2>
+              <div id="options" class="mb40">
+                <h3 class="fs-str-18">Options</h3>
+                <table class="fs-table bordered">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Values</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$prefix</td>
+                      <td>fs-</td>
+                      <td>Prefix class</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="media-query" class="mb40">
+                <h3 class="fs-str-18">Media query</h3>
+                <table class="fs-table bordered">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Values</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$xxs</td>
+                      <td>554px</td>
+                      <td>&lt; 554px</td>
+                    </tr>
+                    <tr>
+                      <td>$xs</td>
+                      <td>767</td>
+                      <td>&lt; 767px</td>
+                    </tr>
+                    <tr>
+                      <td>$sm</td>
+                      <td>992px</td>
+                      <td>&lt; 992px</td>
+                    </tr>
+                    <tr>
+                      <td>$md</td>
+                      <td>1200px</td>
+                      <td>&lt; 1200px</td>
+                    </tr>
+                    <tr>
+                      <td>$lg</td>
+                      <td>1400px</td>
+                      <td>1400px</td>
+                    </tr>
+                    <tr>
+                      <td>$xl</td>
+                      <td>1600px</td>
+                      <td>1600px</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="mixins" class="mb40">
+                <h3 class="fs-str-18">Mixins & Function</h3>
+                <table class="fs-table bordered">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>+query-media($value-media)</code></td>
+                      <td>
+                        $value-media = xs, sm, md, lg; min-width & max-width
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+min-query-media($value-media)</code></td>
+                      <td>
+                        $value-media = xs, sm, md, lg; Only min-width
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+max-query-media($value-media)</code></td>
+                      <td>
+                        $value-media = xs, sm, md, lg; Only max-width
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+transition($value)</code></td>
+                      <td>
+                        $value = all value property on transition style
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+transform($value)</code></td>
+                      <td>
+                        $value = all value property on transform style
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>convertRem($size)</code></td>
+                      <td>
+                        Function convert pixel to rem
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="options" class="mb40">
+                <h3 class="fs-str-18">Color</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-primary fs-white fs-tac p10">.fs-bg-primary</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-primary-hover fs-white fs-tac p10">.fs-bg-primary-hover</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-secondary fs-white fs-tac p10">.fs-bg-secondary</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-secondary-hover fs-white fs-tac p10">.fs-bg-secondary-hover</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-black fs-white fs-tac p10">.fs-bg-black</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-grey fs-white fs-tac p10">.fs-bg-grey</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-border fs-tac p10">.fs-bg-border</div>
+                  </div>
+                  <div class="fs-flex-col fs-col-3-sm mb15">
+                    <div class="fs-bg-white fs-tac p10">.fs-bg-white</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="content" class="mb60">
+              <h2 class="fs-reg-32">Content</h2>
+              <div id="heading" class="mb40">
+                <h3 class="fs-str-18">Heading</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-4-sm">
+                    <h4>Default <span><code>.fs-reg</code></span></h4>
+                    <hr class="mb20">
+                    <h1>Heading</h1>
+                    <h2>Heading</h2>
+                    <h3>Heading</h3>
+                    <h4>Heading</h4>
+                    <h5>Heading</h5>
+                    <h6>Heading</h6>
+                  </div>
+                  <div class="fs-flex-4-sm">
+                    <h4 class="fs-smb">Semibold <span><code>.fs-smb</code></span></h4>
+                    <hr class="mb20">
+                    <h1 class="fs-smb">Heading</h1>
+                    <h2 class="fs-smb">Heading</h2>
+                    <h3 class="fs-smb">Heading</h3>
+                    <h4 class="fs-smb">Heading</h4>
+                    <h5 class="fs-smb">Heading</h5>
+                    <h6 class="fs-smb">Heading</h6>
+                  </div>
+                  <div class="fs-flex-4-sm">
+                    <h4 class="fs-str">Bold <span><code>.fs-str</code></span></h4>
+                    <hr class="mb20">
+                    <h1 class="fs-str">Heading</h1>
+                    <h2 class="fs-str">Heading</h2>
+                    <h3 class="fs-str">Heading</h3>
+                    <h4 class="fs-str">Heading</h4>
+                    <h5 class="fs-str">Heading</h5>
+                    <h6 class="fs-str">Heading</h6>
+                  </div>
+                </div>
+              </div>
+              <div id="typography" class="mb40">
+                <h3 class="fs-str-18">Typography</h3>
+                <table class="fs-table bordered">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Values</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>.fs-lig-$size</code></td>
+                      <td>
+                        .fs-lig = Light font-weight<br/>
+                        $size: <code>12, 14, 16, 18, 21, 24, 28, 32, 48, 72</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>.fs-reg-$size</code></td>
+                      <td>
+                        .fs-reg = Regular font-weight<br/>
+                        $size: <code>12, 14, 16, 18, 21, 24, 28, 32, 48, 72</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>.fs-smb-$size</code></td>
+                      <td>
+                        .fs-smb = Semibold font-weight<br/>
+                        $size: <code>12, 14, 16, 18, 21, 24, 28, 32, 48, 72</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>.fs-str-$size</code></td>
+                      <td>
+                        .fs-str = Bold font-weight<br/>
+                        $size: <code>12, 14, 16, 18, 21, 24, 28, 32, 48, 72</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="paragraph" class="mb40">
+                <h3 class="fs-str-18">Paragraph</h3>
+                <p>Lorem ipsum dolor sit amet, mei no audiam molestiae, qui ea solum facilis signiferumque. Impedit verterem ut quo. Vis iisque principes ne, velit quaeque reprehendunt vel an. Lucilius corrumpit adversarium ad nec, sea in consequat scripserit. Mel ut aliquid interesset.</p>
+              </div>
+              <div id="list" class="mb40">
+                <h3 class="fs-str-18">List</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-col-auto">
+                    <code class="mb10">&lt;ul&gt;</code>
+                    <ul>
+                      <li>List item 01</li>
+                      <li>List item 02</li>
+                      <li>List item 03</li>
+                      <li>List item 04</li>
+                      <li>List item 05</li>
+                    </ul>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="mb10">&lt;ol&gt;</code>
+                    <ol>
+                      <li>List item 01</li>
+                      <li>List item 02</li>
+                      <li>List item 03</li>
+                      <li>List item 04</li>
+                      <li>List item 05</li>
+                    </ol>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="mb10">&lt;ul class="none"&gt;</code>
+                    <ul class="none">
+                      <li>List item 01</li>
+                      <li>List item 02</li>
+                      <li>List item 03</li>
+                      <li>List item 04</li>
+                      <li>List item 05</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="images" class="mb40">
+                <h3 class="fs-str-18">Images</h3>
+                <code class="mb20">&lt;img src="$url" class="fs-fluid"&gt;</code>
+                <img src="http://via.placeholder.com/300x200" class="fs-fluid"/>
+              </div>
+              <div id="figures" class="mb40">
+                <h3 class="fs-str-18">Figures</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-6-sm">
+                    <figure class="fs-figure--exlarge mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--large mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--medium mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--small mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <table class="fs-table bordered mt20">
+                      <thead>
+                        <tr>
+                          <th>Variable</th>
+                          <th>Values</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>.fs-figure--$size</code></td>
+                          <td>
+                            $size = exlarge, large, medium, small<br/>
+                            square
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="fs-flex-6-sm">
+                    <figure class="fs-figure--exlarge circle mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--large circle mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--medium circle mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <figure class="fs-figure--small circle mr10">
+                      <img class="fs-fluid" src="http://via.placeholder.com/300x300"/>
+                    </figure>
+                    <table class="fs-table bordered mt20">
+                      <thead>
+                        <tr>
+                          <th>Variable</th>
+                          <th>Values</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>.fs-figure--$size</code></td>
+                          <td>
+                            $size = exlarge, large, medium, small<br/>
+                            circle = <code>.circle</code>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="grid" class="mb60">
+              <h2 class="fs-reg-32">Grid</h2>
+              <div class="mb20">
+                <h3 class="fs-str-18">Grid auto width</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-col-auto</code>
+                  </div>
+                </div>
+              </div>
+              <div class="mb20">
+                <h3 class="fs-str-18">Grid responsive</h3>
+                <ul class="none">
+                  <li class="mb10">Grid size <code>1</code> to <code>12</code></li>
+                  <li class="mb10">Grid media query <code>xs</code> , <code>sm</code> , <code>md</code> , <code>lg</code></li>
+                  <li class="mb10">Write class example: <code>.fs-flex-[grid_size]-[grid_media_query]</code></li>
+                </ul>
+                <div class="fs-flex mt30">
+                  <div class="fs-flex-12-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-12-sm</code>
+                  </div>
+                  <div class="fs-flex-6-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-6-sm</code>
+                  </div>
+                  <div class="fs-flex-6-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-6-sm</code>
+                  </div>
+                  <div class="fs-flex-4-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-4-sm</code>
+                  </div>
+                  <div class="fs-flex-4-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-4-sm</code>
+                  </div>
+                  <div class="fs-flex-4-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-4-sm</code>
+                  </div>
+                  <div class="fs-flex-3-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-3-sm</code>
+                  </div>
+                  <div class="fs-flex-3-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-3-sm</code>
+                  </div>
+                  <div class="fs-flex-3-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-3-sm</code>
+                  </div>
+                  <div class="fs-flex-3-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-3-sm</code>
+                  </div>
+                </div>
+              </div>
+              <div class="mb40">
+                <h3 class="fs-str-18">Grid offset</h3>
+                <ul class="none">
+                  <li class="mb10">Grid size <code>1</code> to <code>12</code></li>
+                  <li class="mb10">Grid media query <code>xs</code> , <code>sm</code> , <code>md</code> , <code>lg</code></li>
+                  <li class="mb10">Write class example: <code>.fs-offset-[grid_size]-[grid_media_query]</code></li>
+                </ul>
+                <div class="fs-flex mt30">
+                  <div class="fs-flex-10-sm fs-offset-1-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-10-sm .fs-offset-1-sm</code>
+                  </div>
+                  <div class="fs-flex-8-sm fs-offset-2-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-8-sm .fs-offset-2-sm</code>
+                  </div>
+                  <div class="fs-flex-6-sm fs-offset-3-sm">
+                    <code class="fs-block mb20 fs-tac">.fs-flex-6-sm .fs-offset-2-sm</code>
+                  </div>
+                </div>
+              </div>
+              <div id="column" class="mb20">
+                <h3 class="fs-str-18">Column</h3>
+                <ul class="none">
+                  <li class="mb10">Column size <code>1</code> to <code>12</code></li>
+                  <li class="mb10">Write class example: <code>.fs-column-[column_size]</code></li>
+                </ul>
+                <div class="fs-columns-3 mt30">
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                  <div class="fs-column">
+                    <div class="fs-bg-border mb15" style="height: 200px"></div>
+                    Lorem ipsum dolor sit amet, quas albucius efficiantur te est, eam graecis facilisi singulis at. Pri atqui aliquip dolorum ne, vim assum labores vivendum et, sit albucius delectus ut.</div>
+                </div>
+              </div>
+            </div>
+            <div id="elements" class="mb60">
+              <h2 class="fs-reg-32">Elements</h2>
+              <div id="buttons" class="mb40">
+                <h3 class="fs-str-18">Button</h3>
+                <div class="fs-flex">
+                  <div class="fs-flex-col-auto">
+                    <h3>Primary Button</h3>
+                    <button class="fs-btn--primary">Submit</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--primary</code>
+                    <h3 class="mt20">Block Button</h3>
+                    <button class="fs-btn--primary fs-fluid">Submit</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--primary .fs-btn-fluid</code>
+                    <h3 class="mt20">Small Button</h3>
+                    <button class="fs-btn--primary fs-small">Submit</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--primary .fs-btn-small</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <h3>Secondary Button</h3>
+                    <button class="fs-btn--secondary">Delete</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--secondary</code>
+                    <h3 class="mt20">Block Button</h3>
+                    <button class="fs-btn--secondary fs-fluid">Delete</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--secondary .fs-btn-fluid</code>
+                    <h3 class="mt20">Small Button</h3>
+                    <button class="fs-btn--secondary fs-small">Delete</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--secondary .fs-btn-small</code>
+                  </div>
+                  <div class="fs-flex-col-auto">
+                    <h3>Transparent Button</h3>
+                    <button class="fs-btn--transparent">Cancel</button>
+                    <code class="mt20 fs-block fs-tac">.fs-btn--transparent</code>
+                  </div>
+                </div>
+              </div>
+              <div class="mb40">
+                <h3 class="fs-str-18">Button align group</h3>
+                <div class="mb60">
+                  <code class="mb20 fs-tac">.fs-btn--inline .fs-tar</code>
+                  <div class="fs-btn--inline fs-tar mb40">
+                    <button class="fs-btn--transparent fs-auto">Cancel</button>
+                    <button class="fs-btn--secondary">Delete</button>
+                    <button class="fs-btn--primary">Submit</button>
+                  </div>
+                  <h3>Button inline align center</h3>
+                  <code class="mb20 fs-tac">.fs-btn--inline .fs-tac</code>
+                  <div class="fs-btn--inline fs-tac mb40">
+                    <button class="fs-btn--transparent fs-auto">Cancel</button>
+                    <button class="fs-btn--secondary">Delete</button>
+                    <button class="fs-btn--primary">Submit</button>
+                  </div>
+                  <h3>Button inline align left</h3>
+                  <code class="mb20 fs-tac">.fs-btn--inline .fs-tal</code>
+                  <div class="fs-btn--inline fs-tal">
+                    <button class="fs-btn--primary">Submit</button>
+                    <button class="fs-btn--secondary">Delete</button>
+                    <button class="fs-btn--transparent fs-auto">Cancel</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mb40">
+                <h3 class="fs-str-18">Table default</h3>
+                <code class="mb20">.fs-table</code>
+                <table class="fs-table mb40">
+                  <thead>
+                    <tr>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <div class="fs-flex">
+                  <div class="fs-flex-col fs-flex-6-sm">
+                    <h3 class="fs-str-18">Bordered Table</h3>
+                    <code class="mb20">.fs-table.bordered</code>
+                    <table class="fs-table bordered mb40">
+                      <thead>
+                        <tr>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="fs-flex-col fs-flex-6-sm">
+                    <h3 class="fs-str-18">Stripped Table</h3>
+                    <code class="mb20">.fs-table.stripped</code>
+                    <table class="fs-table stripped mb40">
+                      <thead>
+                        <tr>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                          <th>Header</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                        <tr>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                          <td>Content</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="mb40">
+                <h3 class="fs-str-18">Bordered & Stripped Table</h3>
+                <code class="mb20">.fs-table.bordered.stripped</code>
+                <table class="fs-table bordered stripped mb40">
+                  <thead>
+                    <tr>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                    <tr>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                      <td>Content</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr/>
+    <footer class="fs-container ptb15 fs-reg-14 fs-tac">
+      2017&copy; 4UI-Kit Created by 4Slicing.com<br/>
+      Sourced code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+
+  </body>
+</html>

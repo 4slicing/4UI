@@ -1,0 +1,36 @@
+// Variable flexbox width
+$width-size : a, b
+// Flex
+=build-flex($prefix:'fs-')
+
+  @for $i from 1 through length($grid-value)
+    .#{$prefix}flex-#{nth($grid-value, $i)}-lg
+      +min-query-media(lg)
+        flex: none
+        width: convertGrid(#{nth($grid-value, $i)})
+      +max-query-media(lg)
+        flex: none
+        width: 100%
+    .#{$prefix}flex-#{nth($grid-value, $i)}-md
+      +min-query-media(md)
+        flex: none
+        width: convertGrid(#{nth($grid-value, $i)})
+      +max-query-media(md)
+        flex: none
+        width: 100%
+    .#{$prefix}flex-#{nth($grid-value, $i)}-sm
+      +min-query-media(sm)
+        flex: none
+        width: convertGrid(#{nth($grid-value, $i)})
+      +max-query-media(sm)
+        flex: none
+        width: 100%
+    .#{$prefix}flex-#{nth($grid-value, $i)}-xs
+      +min-query-media(xs)
+        flex: none
+        width: convertGrid(#{nth($grid-value, $i)})
+      +max-query-media(sm)
+        flex: none
+        width: convertGrid(#{nth($grid-value, $i)})
+
++build-flex()
